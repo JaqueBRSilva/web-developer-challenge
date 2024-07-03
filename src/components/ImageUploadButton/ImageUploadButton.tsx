@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { PiImageThin } from 'react-icons/pi';
-import { ImageUploadButton, ImageUploadPicContainer, ImageUploadSelf } from './styles';
+import { ImageUploadButton, ImageUploadPicContainer, ImageUploadSelf, ImageUploadView } from './styles';
 
 const ImageUpload = () => {
   const [image, setImage] = useState('')
@@ -11,27 +11,29 @@ const ImageUpload = () => {
   }
 
   return (
-    <ImageUploadPicContainer>
-      <ImageUploadButton
-        onClick={handleSelectImageForUpload}
-      >
-        {
-          (image.length == 0) ?
+    <ImageUploadView>
+      <ImageUploadPicContainer>
+        <ImageUploadButton
+          onClick={handleSelectImageForUpload}
+        >
+          {
+            (image.length == 0) ?
 
-            <PiImageThin
-              color={"#FFF"}
-              size={28}
-            />
+              <PiImageThin
+                color={"#FFF"}
+                size={25}
+              />
 
-            :
+              :
 
-            <ImageUploadSelf
-              src={image}
-              alt='imagem do post'
-            />
-        }
-      </ImageUploadButton>
-    </ImageUploadPicContainer>
+              <ImageUploadSelf
+                src={image}
+                alt='imagem do post'
+              />
+          }
+        </ImageUploadButton>
+      </ImageUploadPicContainer>
+    </ImageUploadView>
   )
 }
 
