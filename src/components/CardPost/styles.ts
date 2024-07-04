@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const PostCardMainArea = styled.div`
-    width: 100vw;
+    width: 80vw;
     min-height: 219px;
     padding: 1.4rem;
     background-color: var(--mid-black);
@@ -10,6 +10,6 @@ export const PostCardMainArea = styled.div`
 
 
     @media screen and (min-width: 576px) {
-        width: 460px;
+        max-width: 460px;
     }
 `
