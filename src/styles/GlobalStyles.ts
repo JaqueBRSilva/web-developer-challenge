@@ -7,12 +7,14 @@ export const GlobalStyles = createGlobalStyle`
         --grey: #494949;
         --light-grey: #5F5F5F;
         --mid-grey: #9a9a9a;
-        --red-orange: #A54D27;
 
         --topbar: #2B2B2B;
         --topbar-title: #71BB00;
         --topbar-subtitle: var(--light-grey);
         --topbar-border-bottom: #232323;
+
+        --delete-card-button: #A54D27;
+        --delete-card-btn-hover: #532613;
         
 
         background-color: var(--light-black);
