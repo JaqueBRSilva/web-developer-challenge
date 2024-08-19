@@ -10,7 +10,7 @@ export interface PostCard_Props {
 }
 
 export interface CardPublished_Props {
-    id?: string;
+    id?: string | number | any;
     cardPublishedImage: string;
     cardPublishedText: string;
     cardPublishedAuthor: string;
