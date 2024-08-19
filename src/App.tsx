@@ -6,11 +6,11 @@ import FeedPosts from "./components/FeedPosts/FeedPosts"
 const AppContainer = styled.div`
   display: grid;
   justify-content: center;
-  margin: 2.5rem 1rem;
+  margin: 8.5rem 1rem;
 
 
   @media screen and (min-width: 576px) {
-    margin: 2.5rem 5rem;
+    margin: 8.5rem 5rem;
   }
 
 `
