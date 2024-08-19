@@ -5,8 +5,8 @@ export const PostCardMainArea = styled.div`
     min-height: 219px;
     padding: 1.4rem;
     background-color: var(--mid-black);
-    border: 0.1px var(--grey) solid;
-    border-radius: 0.3rem;
+    border: 1px var(--grey) solid;
+    border-radius: 4px;
 
 
     @media screen and (min-width: 576px) {
