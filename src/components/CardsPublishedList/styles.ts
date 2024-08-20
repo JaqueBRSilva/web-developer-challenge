@@ -12,7 +12,8 @@ export const CardPublishedContentView = styled.div`
     border-radius: 4px;
 
     @media screen and (min-width: 576px) {
-        max-width: 472px;
+        width: 64vw;
+        max-width: 488px;
     }
 `
 
