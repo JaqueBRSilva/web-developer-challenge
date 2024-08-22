@@ -14,5 +14,5 @@ export interface CardPublished_Props {
     cardPublishedImage: string;
     cardPublishedText: string;
     cardPublishedAuthor: string;
-    deletePostButton?: Buttons_Props;
+    deletePostButton?: () => void | Buttons_Props;
 }
