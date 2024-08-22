@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import CardPost from "./components/CardPost/CardPost"
+import CardPost from "./components/Card/Card"
 import FeedPosts from "./components/FeedPosts/FeedPosts"
 
 

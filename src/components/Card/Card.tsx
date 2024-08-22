@@ -2,7 +2,7 @@ import BasicForm from '../BasicForm/BasicForm';
 import ImageUpload from '../ImageUploadButton/ImageUploadButton';
 import { PostCardMainArea } from './styles';
 
-const CardPost = () => {
+const Card = () => {
 
     return (
         <PostCardMainArea>
@@ -12,4 +12,4 @@ const CardPost = () => {
     )
 }
 
-export default CardPost;
+export default Card;
