@@ -2,14 +2,17 @@ import { useState } from "react"
 import { DiscardButton, FormContainer, GroupButtonsContainer, InputsContainer, MessageInputTxt, NameInputTxt, PublishButton } from "./styles"
 
 const BasicForm = () => {
-    const [name, setName] = useState('')
-    const [message, setMessage] = useState('')
+  const [imagePost, setImagePost] = useState(null)
+  const [nameAuthor, setNameAuthor] = useState('')
+  const [message, setMessage] = useState('')
 
-    const handleDiscardContent = () => {
-        setName('')
-        setMessage('')
-        return
-    }
+  
+  const handleDiscardPost = () => {
+    setImagePost(null)
+    setNameAuthor('')
+    setMessage('')
+    return
+  }
 
     const handlePostContent = () => {
     }
@@ -34,10 +37,12 @@ const BasicForm = () => {
                 />
             </InputsContainer>
 
-            <GroupButtonsContainer>
-                <DiscardButton onClick={handleDiscardContent} >
-                    Descartar
-                </DiscardButton>
+      <GroupButtonsContainer>
+        <DiscardButton type="reset"
+          onClick={handleDiscardPost}
+        >
+          Descartar
+        </DiscardButton>
 
                 <PublishButton onClick={handlePostContent} >
                     Publicar
