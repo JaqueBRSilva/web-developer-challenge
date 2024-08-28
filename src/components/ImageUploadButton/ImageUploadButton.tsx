@@ -1,37 +1,62 @@
-import { useState } from 'react';
-import { PiImageThin } from 'react-icons/pi';
-import { ImageUploadButton, ImageUploadPicContainer, ImageUploadSelf, ImageUploadView } from './styles';
+import { ChangeEvent, useState } from 'react';
+import {
+  ImageFileInput,
+  ImageSelected,
+  ImageUploadIcon,
+  ImageUploadIconContainer,
+  ImageUploadPicContainer,
+  ImageUploadSelf,
+  ImageUploadView
+} from './styles';
 
 const ImageUpload = () => {
-  const [image, setImage] = useState('')
+  const [imageSelected, setImageSelected] = useState(null)
 
-  const handleSelectImageForUpload = () => {
-    const IMG_ALT = 'https://images.unsplash.com/photo-1433477221118-6eca20a0d62e'
-    return setImage(IMG_ALT)
+  const handleSelectImageForUpload = (event: ChangeEvent) => {
+    if (!event.target.files) {
+      return
+    }
+
+    const imageFile = event.target.files[0]
+
+    if (!imageFile) {
+      return
+
+    } else {
+      return setImageSelected(imageFile)
+
+    }
+
   }
 
   return (
     <ImageUploadView>
       <ImageUploadPicContainer>
-        <ImageUploadButton
-          onClick={handleSelectImageForUpload}
-        >
-          {
-            (image.length == 0) ?
 
-              <PiImageThin
-                color={"#FFF"}
-                size={25}
-              />
+        <ImageFileInput
+          id="image-input"
+          type="file"
+          accept="image/*"
+          onChange={handleSelectImageForUpload}
+        />
 
-              :
+        <ImageUploadSelf htmlFor="image-input">
+          {imageSelected ? (
 
-              <ImageUploadSelf
-                src={image}
-                alt='imagem do post'
-              />
-          }
-        </ImageUploadButton>
+            <ImageSelected
+              src={URL.createObjectURL(imageSelected)}
+              alt='Imagem selecionada'
+            />
+
+          ) : (
+
+            <ImageUploadIconContainer>
+              <ImageUploadIcon size={26} />
+            </ImageUploadIconContainer>
+
+          )}
+        </ImageUploadSelf>
+
       </ImageUploadPicContainer>
     </ImageUploadView>
   )

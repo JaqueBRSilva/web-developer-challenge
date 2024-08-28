@@ -1,3 +1,4 @@
+import { PiImageThin } from "react-icons/pi";
 import styled from "styled-components";
 
 export const ImageUploadView = styled.div`
@@ -10,23 +11,35 @@ export const ImageUploadPicContainer = styled.picture`
     height: 80px;
     display: flex;
     border: 1px var(--grey) solid;
-    border-radius: 2rem;
+    border-radius: 40%;
 
     &:hover {
-        background: var(--light-black)
+        background: var(--light-black);
     }
 `
 
-export const ImageUploadSelf = styled.img`
-    object-fit: center;
+export const ImageFileInput = styled.input`
+    display: none;
+`
+
+export const ImageUploadSelf = styled.label`
+    flex: 1;
+`
+
+export const ImageUploadIconContainer = styled.div`
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+`
+
+export const ImageUploadIcon = styled(PiImageThin)`
+    color: #FFF;
+`
+
+export const ImageSelected = styled.img`
+    object-fit: cover;
     width: 100%;
     height: 100%;
     border-radius: 40%;
-`
-
-export const ImageUploadButton = styled.button`
-    background: transparent;
-    border: none;
-    width: 100%;
-    height: 100%;
 `
